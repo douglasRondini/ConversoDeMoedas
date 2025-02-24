@@ -1,363 +1,367 @@
 package com.example.conversormoedas.network.configuration
 
-import kotlinx.serialization.SerialName
+import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class CurrencyResponse(
-    @SerialName("AED")
+    @SerializedName("USD")
+    val usd: String,
+
+    @SerializedName("AED")
     val aed: String,
 
-    @SerialName("AFN")
+    @SerializedName("AFN")
     val afn: String,
 
-    @SerialName("ALL")
+    @SerializedName("ALL")
     val all: String,
 
-    @SerialName("AMD")
+    @SerializedName("AMD")
     val amd: String,
 
-    @SerialName("ANG")
+    @SerializedName("ANG")
     val ang: String,
 
-    @SerialName("AOA")
+    @SerializedName("AOA")
     val aoa: String,
 
-    @SerialName("ARS")
+    @SerializedName("ARS")
     val ars: String,
 
-    @SerialName("AUD")
+    @SerializedName("AUD")
     val aud: String,
 
-    @SerialName("AZN")
+    @SerializedName("AZN")
     val azn: String,
 
-    @SerialName("BAM")
+    @SerializedName("BAM")
     val bam: String,
 
-    @SerialName("BBD")
+    @SerializedName("BBD")
     val bbd: String,
 
-    @SerialName("BDT")
+    @SerializedName("BDT")
     val bdt: String,
 
-    @SerialName("BGN")
+    @SerializedName("BGN")
     val bgn: String,
 
-    @SerialName("BHD")
+    @SerializedName("BHD")
     val bhd: String,
 
-    @SerialName("BIF")
+    @SerializedName("BIF")
     val bif: String,
 
-    @SerialName("BND")
+    @SerializedName("BND")
     val bnd: String,
 
-    @SerialName("BOB")
+    @SerializedName("BOB")
     val bob: String,
 
-    @SerialName("BRL")
+    @SerializedName("BRL")
     val brl: String,
 
-    @SerialName("BRLT")
+    @SerializedName("BRLT")
     val brlt: String,
 
-    @SerialName("BSD")
+    @SerializedName("BSD")
     val bsd: String,
 
-    @SerialName("BTC")
+    @SerializedName("BTC")
     val btc: String,
 
-    @SerialName("BWP")
+    @SerializedName("BWP")
     val bwp: String,
 
-    @SerialName("BYN")
+    @SerializedName("BYN")
     val byn: String,
 
-    @SerialName("BZD")
+    @SerializedName("BZD")
     val bzd: String,
 
-    @SerialName("CAD")
+    @SerializedName("CAD")
     val cad: String,
 
-    @SerialName("CHF")
+    @SerializedName("CHF")
     val chf: String,
 
-    @SerialName("CHFRTS")
+    @SerializedName("CHFRTS")
     val chfrts: String,
 
-    @SerialName("CLP")
+    @SerializedName("CLP")
     val clp: String,
 
-    @SerialName("CNH")
+    @SerializedName("CNH")
     val cnh: String,
 
-    @SerialName("CNY")
+    @SerializedName("CNY")
     val cny: String,
 
-    @SerialName("COP")
+    @SerializedName("COP")
     val cop: String,
 
-    @SerialName("CRC")
+    @SerializedName("CRC")
     val crc: String,
 
-    @SerialName("CUP")
+    @SerializedName("CUP")
     val cup: String,
 
-    @SerialName("CVE")
+    @SerializedName("CVE")
     val cve: String,
 
-    @SerialName("CZK")
+    @SerializedName("CZK")
     val czk: String,
 
-    @SerialName("DJF")
+    @SerializedName("DJF")
     val djf: String,
 
-    @SerialName("DKK")
+    @SerializedName("DKK")
     val dkk: String,
 
-    @SerialName("DOGE")
+    @SerializedName("DOGE")
     val doge: String,
 
-    @SerialName("DOP")
+    @SerializedName("DOP")
     val dop: String,
 
-    @SerialName("DZD")
+    @SerializedName("DZD")
     val dzd: String,
 
-    @SerialName("EGP")
+    @SerializedName("EGP")
     val egp: String,
 
-    @SerialName("ETB")
+    @SerializedName("ETB")
     val etb: String,
 
-    @SerialName("ETH")
+    @SerializedName("ETH")
     val eth: String,
 
-    @SerialName("EUR")
+    @SerializedName("EUR")
     val eur: String,
 
-    @SerialName("FJD")
+    @SerializedName("FJD")
     val fjd: String,
 
-    @SerialName("GBP")
+    @SerializedName("GBP")
     val gbp: String,
 
-    @SerialName("GEL")
+    @SerializedName("GEL")
     val gel: String,
 
-    @SerialName("GHS")
+    @SerializedName("GHS")
     val ghs: String,
 
-    @SerialName("GMD")
+    @SerializedName("GMD")
     val gmd: String,
 
-    @SerialName("GNF")
+    @SerializedName("GNF")
     val gnf: String,
 
-    @SerialName("GTQ")
+    @SerializedName("GTQ")
     val gtq: String,
 
-    @SerialName("HKD")
+    @SerializedName("HKD")
     val hkd: String,
 
-    @SerialName("HNL")
+    @SerializedName("HNL")
     val hnl: String,
 
-    @SerialName("HRK")
+    @SerializedName("HRK")
     val hrk: String,
 
-    @SerialName("HTG")
+    @SerializedName("HTG")
     val htg: String,
 
-    @SerialName("HUF")
+    @SerializedName("HUF")
     val huf: String,
 
-    @SerialName("IDR")
+    @SerializedName("IDR")
     val idr: String,
 
-    @SerialName("ILS")
+    @SerializedName("ILS")
     val ils: String,
 
-    @SerialName("INR")
+    @SerializedName("INR")
     val inr: String,
 
-    @SerialName("IQD")
+    @SerializedName("IQD")
     val iqd: String,
 
-    @SerialName("IRR")
+    @SerializedName("IRR")
     val irr: String,
 
-    @SerialName("ISK")
+    @SerializedName("ISK")
     val isk: String,
 
-    @SerialName("JMD")
+    @SerializedName("JMD")
     val jmd: String,
 
-    @SerialName("JOD")
+    @SerializedName("JOD")
     val jod: String,
 
-    @SerialName("JPY")
+    @SerializedName("JPY")
     val jpy: String,
 
-    @SerialName("JPYRTS")
+    @SerializedName("JPYRTS")
     val jpyrts: String,
 
-    @SerialName("KES")
+    @SerializedName("KES")
     val kes: String,
 
-    @SerialName("KGS")
+    @SerializedName("KGS")
     val kgs: String,
 
-    @SerialName("KHR")
+    @SerializedName("KHR")
     val khr: String,
 
-    @SerialName("KMF")
+    @SerializedName("KMF")
     val kmf: String,
 
-    @SerialName("KRW")
+    @SerializedName("KRW")
     val krw: String,
 
-    @SerialName("KWD")
+    @SerializedName("KWD")
     val kwd: String,
 
-    @SerialName("KYD")
+    @SerializedName("KYD")
     val kyd: String,
 
-    @SerialName("KZT")
+    @SerializedName("KZT")
     val kzt: String,
 
-    @SerialName("LAK")
+    @SerializedName("LAK")
     val lak: String,
 
-    @SerialName("LBP")
+    @SerializedName("LBP")
     val lbp: String,
 
-    @SerialName("LKR")
+    @SerializedName("LKR")
     val lkr: String,
 
-    @SerialName("LSL")
+    @SerializedName("LSL")
     val lsl: String,
 
-    @SerialName("LTC")
+    @SerializedName("LTC")
     val ltc: String,
 
-    @SerialName("LYD")
+    @SerializedName("LYD")
     val lyd: String,
 
-    @SerialName("MAD")
+    @SerializedName("MAD")
     val mad: String,
 
-    @SerialName("MDL")
+    @SerializedName("MDL")
     val mdl: String,
 
-    @SerialName("MGA")
+    @SerializedName("MGA")
     val mga: String,
 
-    @SerialName("MKD")
+    @SerializedName("MKD")
     val mkd: String,
 
-    @SerialName("MMK")
+    @SerializedName("MMK")
     val mmk: String,
 
-    @SerialName("MNT")
+    @SerializedName("MNT")
     val mnt: String,
 
-    @SerialName("MOP")
+    @SerializedName("MOP")
     val mop: String,
 
-    @SerialName("MRO")
+    @SerializedName("MRO")
     val mro: String,
 
-    @SerialName("MUR")
+    @SerializedName("MUR")
     val mur: String,
 
-    @SerialName("MVR")
+    @SerializedName("MVR")
     val mvr: String,
 
-    @SerialName("MWK")
+    @SerializedName("MWK")
     val mwk: String,
 
-    @SerialName("MXN")
+    @SerializedName("MXN")
     val mxn: String,
 
-    @SerialName("MYR")
+    @SerializedName("MYR")
     val myr: String,
 
-    @SerialName("MZN")
+    @SerializedName("MZN")
     val mzn: String,
 
-    @SerialName("NAD")
+    @SerializedName("NAD")
     val nad: String,
 
-    @SerialName("NGN")
+    @SerializedName("NGN")
     val ngn: String,
 
-    @SerialName("NGNI")
+    @SerializedName("NGNI")
     val ngni: String,
 
-    @SerialName("NGNPARALLEL")
+    @SerializedName("NGNPARALLEL")
     val ngnparallel: String,
 
-    @SerialName("NIO")
+    @SerializedName("NIO")
     val nio: String,
 
-    @SerialName("NOK")
+    @SerializedName("NOK")
     val nok: String,
 
-    @SerialName("NPR")
+    @SerializedName("NPR")
     val npr: String,
 
-    @SerialName("NZD")
+    @SerializedName("NZD")
     val nzd: String,
 
-    @SerialName("OMR")
+    @SerializedName("OMR")
     val omr: String,
 
-    @SerialName("PAB")
+    @SerializedName("PAB")
     val pab: String,
 
-    @SerialName("PEN")
+    @SerializedName("PEN")
     val pen: String,
 
-    @SerialName("PGK")
+    @SerializedName("PGK")
     val pgk: String,
 
-    @SerialName("PHP")
+    @SerializedName("PHP")
     val php: String,
 
-    @SerialName("PKR")
+    @SerializedName("PKR")
     val pkr: String,
 
-    @SerialName("PLN")
+    @SerializedName("PLN")
     val pln: String,
 
-    @SerialName("PYG")
+    @SerializedName("PYG")
     val pyg: String,
 
-    @SerialName("QAR")
+    @SerializedName("QAR")
     val qar: String,
 
-    @SerialName("RON")
+    @SerializedName("RON")
     val ron: String,
 
-    @SerialName("RSD")
+    @SerializedName("RSD")
     val rsd: String,
 
-    @SerialName("RUB")
+    @SerializedName("RUB")
     val rub: String,
 
-    @SerialName("RUBTOD")
+    @SerializedName("RUBTOD")
     val rubtod: String,
 
-    @SerialName("RUBTOM")
+    @SerializedName("RUBTOM")
     val rubtom: String,
 
-    @SerialName("RWF")
+    @SerializedName("RWF")
     val rwf: String,
 
-    @SerialName("SAR")
+    @SerializedName("SAR")
     val sar: String
 
-)
+): Parcelable
 
-annotation class Parcelize

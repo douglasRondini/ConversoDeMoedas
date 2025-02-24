@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface Endpoint {
     @GET("/xml/available/uniq")
-    fun getCurrencies(): Call<CurrencyResponse>
+      fun getCurrencies(): Call<ListCurrencyResponse>
 
     @GET("/json/last/{from}-{to}")
     fun getCurrencyRate(
