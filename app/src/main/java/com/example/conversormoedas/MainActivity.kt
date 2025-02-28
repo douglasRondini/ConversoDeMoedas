@@ -10,8 +10,10 @@ import com.example.conversormoedas.databinding.ActivityMainBinding
 import com.example.conversormoedas.network.configuration.Endpoint
 import com.example.conversormoedas.network.configuration.RetrofitConfiguration
 import com.example.conversormoedas.network.configuration.CurrencyResponse
+import com.example.conversormoedas.network.configuration.ListCodeSpinner
 import com.example.conversormoedas.network.configuration.ListCurrencyResponse
 import com.example.conversormoedas.util.Urls
+import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,48 +33,24 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        getCurrencies()
+//      getCurrencies()
+        listCodeSpiner()
     }
 
+    fun listCodeSpiner() {
+        val currencyCodes = ListCodeSpinner.list
 
-    fun getCurrencies() {
-        val retrofitClient = RetrofitConfiguration.getRetrofitInstance(Urls.URL_CURRECIES)
-        val interfaceGet = retrofitClient.create(Endpoint::class.java)
+        val posBRL = currencyCodes.indexOf("BRL")
+        val posUSD = currencyCodes.indexOf("USD")
 
-        val callBack = interfaceGet.getCurrencies()
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, currencyCodes)
+        adapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item )
+            binding.spnCoin1.adapter = adapter
+            binding.spnCoin2.adapter = adapter
 
-        callBack.enqueue(object : Callback<ListCurrencyResponse>{
-            override fun onResponse(
-                call: Call<ListCurrencyResponse?>,
-                response: Response<ListCurrencyResponse?>
-            ) {
-                var data = mutableListOf<String>()
-                if (response.isSuccessful) {
-                    response.body()?.let { listCurrencies ->
-                        val currencies = listCurrencies.list?.size.toString()
-                        data.add(currencies)
-                    }
-                }
-                val posBRL = data.indexOf("BRL")
-                val posUSD = data.indexOf("USD")
-
-                val adapter = ArrayAdapter(baseContext, android.R.layout.simple_spinner_dropdown_item, data)
-                binding.spnCoin1.adapter = adapter
-                binding.spnCoin2.adapter = adapter
-
-                binding.spnCoin1.setSelection(posBRL)
-                binding.spnCoin2.setSelection(posUSD)
-            }
-
-            override fun onFailure(
-                call: Call<ListCurrencyResponse?>,
-                t: Throwable
-            ) {
-                val error = t.message
-                println("Erro ao obter moedas: $error")
-            }
-
-        })
+        binding.spnCoin1.setSelection(posBRL)
+        binding.spnCoin2.setSelection(posUSD)
 
     }
+
 }

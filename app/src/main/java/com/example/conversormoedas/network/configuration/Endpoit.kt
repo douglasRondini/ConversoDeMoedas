@@ -2,12 +2,15 @@ package com.example.conversormoedas.network.configuration
 
 import com.google.gson.JsonObject
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface Endpoint {
-    @GET("/xml/available/uniq")
+
+
+    @GET("xml/available/uniq/")
       fun getCurrencies(): Call<ListCurrencyResponse>
 
     @GET("/json/last/{from}-{to}")

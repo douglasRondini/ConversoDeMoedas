@@ -16,14 +16,12 @@
             android:textAllCaps="true"
             android:textSize="25sp"
             android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.035"/>
-
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.022"/>
     <Spinner
             android:id="@+id/spn_coin1"
-            style="@style/Theme.Material3.Dark.Dialog.MinWidth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,14 +35,13 @@
     <Spinner
             android:id="@+id/spn_coin2"
             android:layout_width="wrap_content"
-            style="@style/Theme.Material3.Dark.Dialog.MinWidth"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/spn_coin1"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="76dp"
-            app:layout_constraintEnd_toStartOf="@+id/textView"/>
-
+            android:layout_marginTop="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintVertical_bias="0.227"/>
     <EditText
             android:layout_width="249dp"
             android:layout_height="69dp"
@@ -52,11 +49,10 @@
             android:gravity="center"
             android:inputType="number"
             android:textSize="25dp"
-            app:layout_constraintTop_toBottomOf="@id/txt_title"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="15dp"
-            android:id="@+id/edt_valor"/>
+            android:layout_marginEnd="16dp"
+            android:id="@+id/edt_valor"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" android:layout_marginTop="8dp"/>
     <TextView
             android:layout_width="249dp"
             android:layout_height="69dp"
@@ -75,7 +71,7 @@
             android:layout_marginTop="20dp"
             android:text="CONVERTER"
             android:textSize="20sp"
-            />
+            android:id="@+id/button"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

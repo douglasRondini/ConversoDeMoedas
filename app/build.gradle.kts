@@ -64,6 +64,10 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin:1.9.2")
     //kapt("com.squareup.moshi:moshi-kotlin-codegen:1.9.2")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.2")
+    implementation ("org.simpleframework:simple-xml:2.7.1")
+    implementation ("com.squareup.retrofit2:converter-jaxb:2.7.2")
+    implementation ("javax.xml.bind:jaxb-api:2.3.1")
+
 
 
 
