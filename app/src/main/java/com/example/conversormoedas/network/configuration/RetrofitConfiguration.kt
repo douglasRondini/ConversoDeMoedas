@@ -9,7 +9,7 @@ object RetrofitConfiguration {
         fun getRetrofitInstance(path: String): Retrofit {
             return Retrofit.Builder()
                 .baseUrl(path)
-                .addConverterFactory(JaxbConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
 }
