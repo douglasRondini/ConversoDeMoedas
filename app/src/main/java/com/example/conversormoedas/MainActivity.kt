@@ -1,8 +1,12 @@
 package com.example.conversormoedas
 
 import android.os.Bundle
+import java.net.HttpURLConnection
+import java.net.URL
+import org.json.JSONObject
 import android.util.Log
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -43,11 +47,24 @@ class MainActivity : AppCompatActivity() {
       currencyResponse()
        buttonConverte()
 
+
     }
 
     fun buttonConverte() {
         binding.button.setOnClickListener {
+            val value = binding.edtValor.text.toString()
+            if (value.isEmpty()) {
+                mensssagem("preencha um valor")
+                clear()
+                return@setOnClickListener
+            }
             convertMoney()
+
+        }
+    }
+    fun clear() {
+        if (binding.edtValor.text.toString().isEmpty()){
+            binding.txtResult.text = ""
         }
     }
 
@@ -78,10 +95,11 @@ class MainActivity : AppCompatActivity() {
                         val format = String.format("%.2f",conversion)
                         binding.txtResult.text = "R$:$format"
                     } else {
-                        println("Erro: valor da taxa de câmbio inválido")
+                        mensssagem("Erro: valor da taxa de câmbio inválido")
                     }
                 } else {
-                    println("Erro na resposta da API")
+                    mensssagem("Erro: combinação invalida")
+
                 }
 
 
@@ -125,6 +143,15 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
+    fun mensssagem(mensagens: String) {
+        Toast.makeText(this, mensagens, Toast.LENGTH_SHORT).show()
+    }
+
+
+
+
 
     fun listCodeSpiner(data: MutableList<String>) {
 
